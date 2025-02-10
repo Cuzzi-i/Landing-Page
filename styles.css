@@ -1,0 +1,166 @@
+/* General Reset */
+body, div, ul, li, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+/* Header Styling */
+.m-header {
+    background-color: #e67e22;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.h-img img {
+    width: 80px;
+}
+
+.nav {
+    display: flex;
+    gap:40px;
+    margin-right: 50px;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #f1c40f;
+}
+
+/* Intro Section */
+.intro {
+  margin-top:120px;
+    text-align: center;
+    padding: 100px 20px 40px;
+    background-color: #e67e22;
+    color: white;
+}
+
+.t-1 {
+    font-size: 3rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* Video Section */
+.main-video {
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.m-video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Features, About, Contact Sections */
+.container {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.feat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.feat img {
+    width: 50px;
+}
+
+/* Contact Form */
+#contact {
+    background-color: #f1f1f1;
+    padding: 50px;
+}
+
+#email {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #e67e22;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#submit {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#submit:hover {
+    background-color: #d35400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .m-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        margin-right: 0px;
+    }
+
+    .t-1 {
+        font-size: 2rem;
+    }
+
+    .feat {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #email {
+        width: 100%;
+    }
+}
