@@ -4,53 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f97316'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    <header class="m-header" id="header">
-        <div class="h-img">
-            <img id="header-img" src="https://placehold.co/100" alt="Logo">
+    <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm shadow-md z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <img id="header-img" src="https://placehold.co/100" alt="Logo" class="h-12 w-auto">
+            </div>
+            <nav id="nav-bar" class="ml-auto">
+                <ul class="flex items-center space-x-8">
+                    <li><a class="nav-link text-gray-700 hover:text-primary transition-colors font-medium" href="#features">Features</a></li>
+                    <li><a class="nav-link text-gray-700 hover:text-primary transition-colors font-medium" href="#about">About</a></li>
+                    <li><a class="nav-link text-gray-700 hover:text-primary transition-colors font-medium" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="nav-bar">
-            <ul class="nav">
-                <li><a class="nav-link" href="#features">Features</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
+    <div class="h-24"></div>
     
-    <section class="intro">
-        <h1 class="t-1">The Innovation is Key!</h1>
-        <div class="main-video"> 
-            <video class="m-video" id="video" controls>
-                <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <section class="intro min-h-[80vh] bg-gradient-to-br from-orange-50 to-white flex items-center justify-center py-20 px-5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Transform Your Ideas Into Reality</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">Discover innovative solutions that drive success and growth</p>
+            <div class="max-w-4xl mx-auto bg-white p-4 rounded-2xl shadow-2xl">
+                <video class="w-full rounded-xl" id="video" controls>
+                    <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </section>
     
-    <section class="features container" id="features">
-        <h3>Features</h3>
-        <div class="feat"><img src="https://placehold.co/50" alt="Feature 1"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
-        <div class="feat"><img src="https://placehold.co/50" alt="Feature 2"><p>Lorem ipsum dolor sit amet.</p></div>
-        <div class="feat"><img src="https://placehold.co/50" alt="Feature 3"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+    <section class="py-20 px-5 max-w-7xl mx-auto text-center" id="features">
+        <h2 class="text-4xl font-bold mb-10 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-4">Powerful Features</h2>
+        <div class="flex items-start justify-center gap-6 my-8 p-5 rounded-lg transition-transform hover:-translate-y-1">
+            <img src="https://placehold.co/50" alt="AI Icon" class="w-16 p-3 bg-orange-50 rounded-xl">
+            <div class="text-left">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">AI-Powered Analytics</h3>
+                <p>Advanced machine learning algorithms that analyze your data in real-time, providing actionable insights for better decision-making. Boost efficiency by up to 45%.</p>
+            </div>
+        </div>
+        <div class="flex items-start justify-center gap-6 my-8 p-5 rounded-lg transition-transform hover:-translate-y-1">
+            <img src="https://placehold.co/50" alt="Cloud Icon" class="w-16 p-3 bg-orange-50 rounded-xl">
+            <div class="text-left">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">Cloud Integration</h3>
+                <p>Seamless cloud infrastructure with 99.9% uptime guarantee. Scale your operations instantly with our enterprise-grade cloud solutions.</p>
+            </div>
+        </div>
+        <div class="flex items-start justify-center gap-6 my-8 p-5 rounded-lg transition-transform hover:-translate-y-1">
+            <img src="https://placehold.co/50" alt="Support Icon" class="w-16 p-3 bg-orange-50 rounded-xl">
+            <div class="text-left">
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">24/7 Expert Support</h3>
+                <p>Dedicated team of certified professionals with average response time of 15 minutes. Over 10,000 successful support cases resolved.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-5 max-w-7xl mx-auto text-center" id="pricing">
+        <h2 class="text-4xl font-bold mb-10 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-4">Flexible Pricing Plans</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div class="bg-white rounded-2xl p-8 shadow-lg transition-transform hover:-translate-y-2">
+                <h3 class="text-2xl font-bold text-gray-800">Starter</h3>
+                <div class="text-4xl font-bold text-primary my-5">$49/mo</div>
+                <ul class="features-list">
+                    <li>Basic Analytics Dashboard</li>
+                    <li>5 Team Members</li>
+                    <li>10GB Cloud Storage</li>
+                    <li>Email Support</li>
+                </ul>
+                <button class="bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-200">Choose Plan</button>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg transition-transform hover:-translate-y-2 ring-2 ring-primary relative overflow-hidden">
+                <div class="absolute -right-12 top-6 bg-primary text-white py-1 px-12 rotate-45">Popular</div>
+                <h3 class="text-2xl font-bold text-gray-800">Professional</h3>
+                <div class="text-4xl font-bold text-primary my-5">$99/mo</div>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Advanced Analytics</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>15 Team Members</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>50GB Cloud Storage</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>24/7 Priority Support</li>
+                </ul>
+                <button class="bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-200 w-full">Choose Plan</button>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg transition-transform hover:-translate-y-2">
+                <h3 class="text-2xl font-bold text-gray-800">Enterprise</h3>
+                <div class="text-4xl font-bold text-primary my-5">Custom</div>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Custom Analytics Solutions</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Team Members</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Storage</li>
+                    <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Dedicated Support Team</li>
+                </ul>
+                <button class="bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-200 w-full">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-5 max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-10 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-4">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <img src="https://placehold.co/80" alt="Client 1" class="w-20 h-20 rounded-full mx-auto mb-6">
+                <p class="text-lg italic text-gray-700 mb-6">"The AI analytics platform has transformed how we make decisions. Our efficiency improved by 40% in just 3 months."</p>
+                <p class="font-bold text-primary">Sarah Johnson</p>
+                <p class="text-sm text-gray-600">CTO, TechCorp Inc.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <img src="https://placehold.co/80" alt="Client 2" class="w-20 h-20 rounded-full mx-auto mb-6">
+                <p class="text-lg italic text-gray-700 mb-6">"Their cloud solutions have been a game-changer for our startup. Scaling has never been easier."</p>
+                <p class="font-bold text-primary">Michael Chen</p>
+                <p class="text-sm text-gray-600">Founder, CloudScale</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <img src="https://placehold.co/80" alt="Client 3" class="w-20 h-20 rounded-full mx-auto mb-6">
+                <p class="text-lg italic text-gray-700 mb-6">"The support team is exceptional. They've helped us overcome every technical challenge we've faced."</p>
+                <p class="font-bold text-primary">Emma Davis</p>
+                <p class="text-sm text-gray-600">COO, InnovateNow</p>
+            </div>
+        </div>
     </section>
     
-    <section class="about container" id="about">
-        <h3>About</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non atque sed quam!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis accusantium veritatis cupiditate.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non atque sed quam!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis accusantium veritatis cupiditate.</p>
+    <section class="py-20 px-5 max-w-7xl mx-auto text-center bg-orange-50" id="about">
+        <h2 class="text-4xl font-bold mb-10 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-4">Why Choose Us</h2>
+        <div class="max-w-3xl mx-auto">
+            <p class="text-2xl font-semibold text-primary mb-6">We're dedicated to delivering excellence in every project</p>
+            <p>With years of experience in the industry, we understand what it takes to create successful solutions that meet your unique needs.</p>
+            <p>Our team of experts combines creativity with technical expertise to deliver outstanding results that exceed expectations.</p>
+            <p>Join thousands of satisfied clients who have transformed their businesses with our innovative solutions.</p>
+        </div>
     </section>
     
-    <section class="contact container" id="contact">
-        <h3>Contact</h3>
-        <p>Enter your email, and we will contact you as soon as possible.</p>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <input name="email" required placeholder="example@email.com" type="email" id="email">
-            <input id="submit" type="submit" value="Contact!">
+    <section class="py-20 px-5 max-w-7xl mx-auto text-center bg-orange-50" id="contact">
+        <h2 class="text-4xl font-bold mb-10 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-primary after:mx-auto after:mt-4">Get Started Today</h2>
+        <p class="text-xl mb-8">Ready to transform your business? Let's start the conversation!</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" class="contact-form">
+            <input name="email" required placeholder="Enter your email address" type="email" id="email" class="w-full max-w-md px-4 py-3 rounded-lg border-2 border-orange-200 focus:border-primary focus:outline-none mb-4">
+            <input id="submit" type="submit" value="Start Your Journey" class="bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-200 cursor-pointer">
         </form>
     </section>
 </body>
